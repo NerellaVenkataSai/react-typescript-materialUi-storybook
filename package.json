@@ -59,12 +59,24 @@
     "test:coverage": "npm test -- --coverage",
     "eject": "react-scripts eject",
     "start-local-server": "json-server --watch db.json --port 8000",
-    "lint": "eslint --fix ./src"
+    "lint": "eslint --fix ./src",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -92,6 +104,12 @@
     }
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
     "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "3.9.0",
     "@typescript-eslint/parser": "3.9.0",
