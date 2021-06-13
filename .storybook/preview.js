@@ -1,3 +1,6 @@
+import { withConsole } from '@storybook/addon-console';
+import { addDecorator } from '@storybook/react';
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
@@ -7,3 +10,5 @@ export const parameters = {
     },
   },
 };
+
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));

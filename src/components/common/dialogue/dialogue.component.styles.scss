@@ -1,0 +1,14 @@
+.dialogue-component {
+	.dialogue-header {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}	
+	.MuiDialogTitle-root {
+		padding: 0 14px;
+		.close-button {
+			position: absolute;
+			right: 0;
+			padding-top: 4px;
+		}
+	}
+}
