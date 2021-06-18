@@ -1,0 +1,13 @@
+.multi-select-dropdown .MuiMenuItem-root {
+    padding: 0;
+
+    .checkbox-selected,
+    &.Mui-selected .checkbox-not-selected {
+        display: none;
+    }
+
+    .checkbox-not-selected,
+    &.Mui-selected .checkbox-selected {
+        display: block;
+    }
+}
