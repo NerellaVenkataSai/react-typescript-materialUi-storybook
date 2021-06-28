@@ -15,7 +15,7 @@ export type TextFieldComponentProps = {
   onChange?: (event: Event) => void;
   onBlur?: (event: Event) => void;
   rules?: ValidationRules;
-  transformer?: (event: Event) => string | number;
+  transformer?: (event: Event) => string | number | undefined;
   value?: string | number;
   [x: string]: unknown;
 } & TextFieldProps;
