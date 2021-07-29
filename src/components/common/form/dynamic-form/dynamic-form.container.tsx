@@ -33,7 +33,7 @@ export type FormField = {
   id?: string;
   InputProps?: InputProps;
   options?: FieldOption[];
-  defaultValue?: string;
+  defaultValue?: string | number;
   rules?: ValidationRules;
   size?: TextFieldProps['size'];
   /**radio button props ----*/
